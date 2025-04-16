@@ -1,0 +1,30 @@
+<div class="team-matches-container">
+  <div class="banner-container">
+    <img [src]="teamDetails.team_banner_url" class="banner" />
+  </div>
+
+  <div><b class="text">Latest Matches</b></div>
+  <div class="latest-match-container">
+    <div>
+      <p class="c-team">{{ matchDetail.competing_team }}</p>
+      <p>{{ matchDetail.date }}</p>
+      <p>{{ matchDetail.venue }}</p>
+      <p>{{ matchDetail.result }}</p>
+    </div>
+    <img
+      class="competing-team-img"
+      [src]="matchDetail.competing_team_logo"
+      [alt]="matchDetail.id"
+    />
+    <div className="details-container">
+      <p>First Innings</p>
+      <p>{{ matchDetail.first_innings }}</p>
+      <p>Second Innings</p>
+      <p>{{ matchDetail.second_innings }}</p>
+      <p>Man Of The Match</p>
+      <p>{{ matchDetail.man_of_the_match }}</p>
+      <p>umpires</p>
+      <p>{{ matchDetail.umpires }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="ipl-head-container">
+    <img
+      class="ipl-img"
+      src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png"
+      alt="ipl logo"
+    />
+    <h1 class="ipl-head">IPL Dashboard</h1>
+  </div>
+
+  <ul class="team-card-ul">
+    @for(data of teamDetails; track data){
+    <li class="team-card-li" (click)="showDetails(data.id)">
+      <img [src]="data.team_image_url" [alt]="data.name" class="team-logo" />
+      <p class="team-name">{{ data.name }}</p>
+    </li>
+    }
+  </ul>
+</div>
